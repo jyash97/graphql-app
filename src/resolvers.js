@@ -35,6 +35,17 @@ const resolvers = {
         .catch(e => {
           throw e;
         });
+    },
+
+    deleteBook(_, { input }, context) {
+      return context.db
+        .remove(input)
+        .then(res => {
+          return res;
+        })
+        .catch(e => {
+          throw e;
+        });
     }
   }
 };

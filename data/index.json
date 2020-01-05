@@ -1,17 +1,7 @@
 [
   {
-    "title": "This is new Updated Title",
-    "author": "J.K. Rowling",
-    "id": "3350a7d0-2edf-11ea-8594-8f565cc03112"
-  },
-  {
     "title": "Jurassic Park",
     "author": "Michael Crichton",
     "id": "48fe46f0-2edf-11ea-9926-fbc43c2eb955"
-  },
-  {
-    "title": "Harry Potter and Sorceres Stone",
-    "author": "JK Rowling",
-    "id": "7383d810-2fc3-11ea-88ba-31e6f315f2ca"
   }
 ]

@@ -20,6 +20,10 @@ const typeDefs = gql`
     author: String
   }
 
+  input DeleteBookInput {
+    id: ID!
+  }
+
   type Book {
     title: String!
     author: String!
@@ -33,6 +37,7 @@ const typeDefs = gql`
   type Mutation {
     createBook(input: CreateBookInput): Book
     updateBook(input: UpdateBookInput): Book
+    deleteBook(input: DeleteBookInput): ID
   }
 `;
 

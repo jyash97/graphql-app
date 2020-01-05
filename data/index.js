@@ -70,8 +70,27 @@ const update = ({ id, title, author }) => {
   });
 };
 
+const remove = ({ id }) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile("./data/index.json", "utf-8", (err, response) => {
+      if (err) reject(err);
+      let parsedJSON = JSON.parse(response);
+      const updatedData = parsedJSON.filter(item => item.id !== id);
+      fs.writeFile(
+        "./data/index.json",
+        JSON.stringify(updatedData, null, 2),
+        err => {
+          if (err) reject(err);
+        }
+      );
+      resolve(id);
+    });
+  });
+};
+
 module.exports = {
   get,
   create,
-  update
+  update,
+  remove
 };
