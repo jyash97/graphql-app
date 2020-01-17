@@ -14,6 +14,15 @@ const resolvers = {
     }
   },
 
+  Author: {
+    name(value, _, context) {
+      return value;
+    },
+    books(value, _, context) {
+      return context.db.get({ author: value });
+    }
+  },
+
   Mutation: {
     createBook(_, { input }, context) {
       return context.db
